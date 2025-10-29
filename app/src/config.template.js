@@ -2,10 +2,10 @@
 
 /**
  * ==============================================
- * MiroTalk SFU - Configuration File
+ * Legatalk - Configuration File
  * ==============================================
  *
- * This file contains all configurable settings for the MiroTalk SFU application.
+ * This file contains all configurable settings for the Legatalk application.
  * Environment variables can override most settings (see each section for details).
  *
  * Structure:
@@ -630,13 +630,13 @@ module.exports = {
          * AI Behavior:
          * -----------
          * - systemLimit: Personality/behavior instructions for the AI avatar
-         *                (default: Streaming avatar instructions for MiroTalk SFU)
+         *                (default: Streaming avatar instructions for Legatalk)
          */
         videoAI: {
             enabled: process.env.VIDEOAI_ENABLED === 'true',
             basePath: 'https://api.heygen.com',
             apiKey: process.env.VIDEOAI_API_KEY || '',
-            systemLimit: process.env.VIDEOAI_SYSTEM_LIMIT || 'You are a streaming avatar from MiroTalk SFU...',
+            systemLimit: process.env.VIDEOAI_SYSTEM_LIMIT || 'You are a streaming avatar from Legatalk...',
         },
 
         /**
@@ -674,10 +674,10 @@ module.exports = {
             notify: process.env.EMAIL_NOTIFICATIONS === 'true',
             host: process.env.EMAIL_HOST || 'smtp.gmail.com',
             port: parseInt(process.env.EMAIL_PORT) || 587,
-            username: process.env.EMAIL_USERNAME || 'your_username',
-            password: process.env.EMAIL_PASSWORD || 'your_password',
+            username: process.env.EMAIL_USERNAME || 'iamduc7890@gmail.com',
+            password: process.env.EMAIL_PASSWORD || 'xzre ahis vbva uzpb',
             from: process.env.EMAIL_FROM || process.env.EMAIL_USERNAME,
-            sendTo: process.env.EMAIL_SEND_TO || 'sfu.mirotalk@gmail.com',
+            sendTo: process.env.EMAIL_SEND_TO || 'iamduc7890@gmail.com',
         },
 
         /**
@@ -992,10 +992,10 @@ module.exports = {
 
             app: {
                 language: process.env.UI_LANGUAGE || 'en',
-                name: process.env.APP_NAME || 'MiroTalk SFU',
+                name: process.env.APP_NAME || 'Legatalk',
                 title:
                     process.env.APP_TITLE ||
-                    '<h1>MiroTalk SFU</h1> Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+                    '<h1>Legatalk</h1> Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
                 description:
                     process.env.APP_DESCRIPTION ||
                     'Start your next video call with a single click. No download, plug-in, or login is required.',
@@ -1010,12 +1010,12 @@ module.exports = {
              * Site-wide settings including icons and page-specific content.
              */
             site: {
-                title: process.env.SITE_TITLE || 'MiroTalk SFU, Free Video Calls, Messaging and Screen Sharing',
-                icon: process.env.SITE_ICON_PATH || '../images/logo.svg',
-                appleTouchIcon: process.env.APPLE_TOUCH_ICON_PATH || '../images/logo.svg',
-                newRoomTitle: process.env.NEW_ROOM_TITLE || 'Pick name. <br />Share URL. <br />Start conference.',
+                title: process.env.SITE_TITLE || 'LegaTalk harnesses the power of WebRTC and mediasoup to deliver ultra-fast, secure, and crystal-clear real-time communication — from video calls and chat to instant screen sharing, all within your browser.',
+                icon: process.env.SITE_ICON_PATH || '../images/logo.png',
+                appleTouchIcon: process.env.APPLE_TOUCH_ICON_PATH || '../images/logo.png',
+                newRoomTitle: process.env.NEW_ROOM_TITLE || 'Choose a room name. <br />Share Meeting Link. <br />Launch your video conference in seconds.',
                 newRoomDescription:
-                    process.env.NEW_ROOM_DESC || 'Each room has its disposable URL. Just pick a name and share.',
+                    process.env.NEW_ROOM_DESC || 'Every meeting has its own private link. Simply name your room and start sharing.',
             },
 
             /**
@@ -1026,7 +1026,7 @@ module.exports = {
             meta: {
                 description:
                     process.env.META_DESCRIPTION ||
-                    'MiroTalk SFU powered by WebRTC and mediasoup for real-time video communications.',
+                    'Legatalk powered by WebRTC and mediasoup for real-time video communications.',
                 keywords: process.env.META_KEYWORDS || 'webrtc, video calls, conference, screen sharing, mirotalk, sfu',
             },
 
@@ -1037,11 +1037,11 @@ module.exports = {
              */
             og: {
                 type: process.env.OG_TYPE || 'app-webrtc',
-                siteName: process.env.OG_SITE_NAME || 'MiroTalk SFU',
+                siteName: process.env.OG_SITE_NAME || 'Legatalk',
                 title: process.env.OG_TITLE || 'Click the link to make a call.',
                 description:
-                    process.env.OG_DESCRIPTION || 'MiroTalk SFU provides real-time video calls and screen sharing.',
-                image: process.env.OG_IMAGE_URL || 'https://sfu.mirotalk.com/images/mirotalksfu.png',
+                    process.env.OG_DESCRIPTION || 'Legatalk provides real-time video calls and screen sharing.',
+                image: process.env.OG_IMAGE_URL || '',
                 url: process.env.OG_URL || 'https://sfu.mirotalk.com',
             },
 
@@ -1103,12 +1103,12 @@ module.exports = {
                     <br />
                     ${process.env.EMAIL_LABEL || 'Email'}: 
                     <a id="email-button" data-umami-event="Email button"
-                        href="mailto:${process.env.CONTACT_EMAIL || 'miroslav.pejic.85@gmail.com'}?subject=${process.env.EMAIL_SUBJECT || 'MiroTalk SFU info'}">
-                        ${process.env.CONTACT_EMAIL || 'miroslav.pejic.85@gmail.com'}
+                        href="mailto:${process.env.CONTACT_EMAIL || 'iamduc7890@gmail.com'}?subject=${process.env.EMAIL_SUBJECT || 'Legatalk info'}">
+                        ${process.env.CONTACT_EMAIL || 'iamduc7890@gmail.com'}
                     </a>
                     <hr />
                     <span>
-                        &copy; ${new Date().getFullYear()} ${process.env.COPYRIGHT_TEXT || 'MiroTalk SFU, all rights reserved'}
+                        &copy; ${new Date().getFullYear()} ${process.env.COPYRIGHT_TEXT || 'Legatalk, all rights reserved'}
                     </span>
                     <hr />
                     `,
@@ -1133,7 +1133,7 @@ module.exports = {
                               .map((url) => url.trim())
                               .filter(Boolean)
                         : [
-                              'https://photo.cloudron.pocketsolution.net/uploads/original/95/7d/a5f7f7a2c89a5fee7affda5f013c.jpeg',
+                              '',
                           ],
                     buttons: {
                         audio: process.env.WIDGET_SUPPORT_BUTTON_AUDIO !== 'false',
@@ -1151,7 +1151,7 @@ module.exports = {
                         connectText: process.env.WIDGET_SUPPORT_CONNECT_TEXT || 'connect in < 5 seconds',
                         onlineText: process.env.WIDGET_SUPPORT_ONLINE_TEXT || 'We are online',
                         offlineText: process.env.WIDGET_SUPPORT_OFFLINE_TEXT || 'We are offline',
-                        poweredBy: process.env.WIDGET_SUPPORT_POWERED_BY || 'Powered by MiroTalk SFU',
+                        poweredBy: process.env.WIDGET_SUPPORT_POWERED_BY || 'Powered by Legatalk',
                     },
                 },
                 alert: {
@@ -1389,7 +1389,7 @@ module.exports = {
     /**
      * Mediasoup Integration Resources
      * ==============================
-     * Core WebRTC components powering MiroTalk SFU
+     * Core WebRTC components powering Legatalk
      *
      * Essential Links:
      * ---------------
